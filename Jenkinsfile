@@ -6,5 +6,10 @@ pipeline {
         echo 'Hello World'
       }
     }
+    stage('Maven Step') {
+      steps {
+        sh 'nvm clean package -DskipTests'
+      }
+    }
   }
 }
